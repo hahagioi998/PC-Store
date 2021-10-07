@@ -20,6 +20,9 @@ class NavBar extends Component {
               <Link to="/About" className="nav-link">
                 About
               </Link>
+              <Link to="/Featured" className="nav-link">
+                Featured
+              </Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
