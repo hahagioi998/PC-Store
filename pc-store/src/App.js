@@ -1,7 +1,8 @@
 import "./App.css";
-import NavBar from "./shared/NavBar";
-import Home from "./Home/Home";
-import About from "./About/About";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Category from "./pages/Category";
 import { Route } from "react-router-dom";
 
 function App() {
@@ -9,9 +10,8 @@ function App() {
     <div className="App">
       <NavBar />
       <Route exact path="/" component={Home} />
+      <Route exact path="/category/:name" component={Category} />
       <Route exact path="/About" component={About} />
-      {/* <Route exact path="/" component={Home} />
-      <Route exact path="/About" component={About} /> */}
     </div>
   );
 }

@@ -7,11 +7,15 @@ class Product extends Component {
     return (
       <React.Fragment>
         <Card
-          style={{ width: "18rem", display: "inline-block", margin: "0px 5px" }}
+          style={{
+            width: "23%",
+            display: "inline-block",
+            margin: "0px 5px",
+          }}
         >
           <Card.Body>
-            <Card.Title>this.props.product.name</Card.Title>
-            <Card.Text>this.props.product.description</Card.Text>
+            <Card.Title>{this.props.product.name}</Card.Title>
+            <Card.Text>{this.props.product.description}</Card.Text>
           </Card.Body>
         </Card>
       </React.Fragment>
