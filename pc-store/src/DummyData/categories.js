@@ -70,6 +70,7 @@ export const products = [
   {
     id: 1,
     name: "Intel i3",
+    route: "intel-core-i3",
     category: "processors",
     description: "A Proccessor by intel",
     isFeatured: true,
@@ -77,6 +78,7 @@ export const products = [
   {
     id: 2,
     name: "DDR4",
+    route: "kingston-ddr4",
     category: "ram-memory",
     description: "A Ram by kingston",
     isFeatured: false,
@@ -84,6 +86,7 @@ export const products = [
   {
     id: 3,
     name: "AMD 7770",
+    route: "amd-hd-7770",
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
@@ -91,6 +94,7 @@ export const products = [
   {
     id: 3,
     name: "AMD 7770",
+    route: "amd-hd-7770",
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
@@ -98,6 +102,7 @@ export const products = [
   {
     id: 3,
     name: "AMD 7770",
+    route: "amd-hd-7770",
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
@@ -105,6 +110,7 @@ export const products = [
   {
     id: 3,
     name: "AMD 7770",
+    route: "amd-hd-7770",
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,

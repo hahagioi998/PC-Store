@@ -1,24 +1,20 @@
 import React, { Component } from "react";
-import { products } from "../DummyData/categories.js";
-import Product from "../components/Product";
+import Product from "../components/Product.jsx";
 import Categories from "../components/Categories.jsx";
 import Footer from "../components/Footer.jsx";
 
-class Category extends Component {
-  renderProductsFromCategory(name) {
-    return products
-      .filter((prod) => prod.category === name)
-      .map((prod, i) => {
-        return (
-          <span key={i}>
-            <Product product={prod} />
-          </span>
-        );
-      });
+import { products } from "../DummyData/categories.js";
+
+class ProductDetails extends Component {
+  renderProductPage(name) {
+    return (
+      <Product product={products.find((product) => product.route === name)} />
+    );
   }
 
   render() {
     const name = this.props.match.params.name;
+    console.log(products.find((product) => product.route === name));
 
     return (
       <div>
@@ -28,7 +24,7 @@ class Category extends Component {
               <Categories />
             </div>
             <div id="page" className="col-md-10">
-              {this.renderProductsFromCategory(name)}
+              {this.renderProductPage(name)}
             </div>
           </div>
           <Footer />
@@ -38,4 +34,4 @@ class Category extends Component {
   }
 }
 
-export default Category;
+export default ProductDetails;
