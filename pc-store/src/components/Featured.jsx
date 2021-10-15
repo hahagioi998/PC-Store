@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { products } from "../DummyData/categories.js";
 import Product from "../components/Product";
+import { Card } from "react-bootstrap";
+import "./Featured.css";
 
 class Featured extends Component {
   render() {
@@ -8,13 +10,17 @@ class Featured extends Component {
       .filter((l) => l.isFeatured === true)
       .map((l, i) => {
         return (
-          <span key={i}>
+          <span key={i} className="featured-product-showcase">
             <Product product={l} />
           </span>
         );
       });
 
-    return <React.Fragment>{featuredProducts}</React.Fragment>;
+    return (
+      <div id="featured-items-container" className="border">
+        {featuredProducts}
+      </div>
+    );
   }
 }
 
