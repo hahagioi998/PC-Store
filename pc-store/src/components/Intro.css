@@ -1,0 +1,10 @@
+#intro-search {
+  min-width: 20%;
+  max-width: 50%;
+  margin: 25px auto;
+  display: inline-block;
+}
+
+.jumbotron {
+  margin-bottom: 25px;
+}

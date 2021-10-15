@@ -7,20 +7,14 @@ class Category extends Component {
     return products
       .filter((prod) => prod.category === name)
       .map((prod, i) => {
-        return (
-          <span key={i}>
-            <Product product={prod} />
-          </span>
-        );
+        return <Product key={i} product={prod} />;
       });
   }
 
   render() {
     const name = this.props.match.params.name;
 
-    return (
-      <div className="border">{this.renderProductsFromCategory(name)}</div>
-    );
+    return <div className="row">{this.renderProductsFromCategory(name)}</div>;
   }
 }
 

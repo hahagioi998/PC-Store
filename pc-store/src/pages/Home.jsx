@@ -7,12 +7,14 @@ import Footer from "../components/Footer";
 import { Route } from "react-router-dom";
 import Featured from "./Featured";
 
+import "./Home.css";
+
 class Home extends Component {
   render() {
     return (
       <React.Fragment>
         <Intro />
-        <div className="row">
+        <div id="container" className="row">
           <div id="categories" className="col-md-2">
             <Categories />
           </div>

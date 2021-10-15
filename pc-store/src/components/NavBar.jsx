@@ -4,6 +4,7 @@ import { Navbar } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import { NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import NAME_OF_SHOP from "../global_variables.js";
 
 class NavBar extends Component {
   render() {
@@ -12,7 +13,7 @@ class NavBar extends Component {
         <Container>
           <Navbar.Brand>
             <Link to="/" className="navbar-brand navbar-light">
-              AnzurakiZz PC Store
+              {NAME_OF_SHOP}
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
