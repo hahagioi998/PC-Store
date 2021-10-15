@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { products } from "../DummyData/categories.js";
 import Product from "../components/Product";
-import Categories from "../components/Categories.jsx";
-import Footer from "../components/Footer.jsx";
 
 class Category extends Component {
   renderProductsFromCategory(name) {
@@ -21,19 +19,7 @@ class Category extends Component {
     const name = this.props.match.params.name;
 
     return (
-      <div>
-        <React.Fragment>
-          <div className="row">
-            <div id="categories" className="col-md-2">
-              <Categories />
-            </div>
-            <div id="page" className="col-md-10">
-              {this.renderProductsFromCategory(name)}
-            </div>
-          </div>
-          <Footer />
-        </React.Fragment>
-      </div>
+      <div className="border">{this.renderProductsFromCategory(name)}</div>
     );
   }
 }

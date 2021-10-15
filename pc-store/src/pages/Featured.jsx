@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { products } from "../DummyData/categories.js";
 import Product from "../components/Product";
-import { Card } from "react-bootstrap";
 import "./Featured.css";
 
 class Featured extends Component {

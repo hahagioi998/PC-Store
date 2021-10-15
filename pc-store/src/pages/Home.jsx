@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import Categories from "../components/Categories";
+import Category from "./Category";
+import ProductDetails from "./ProductDetails";
 import Intro from "../components/Intro";
-import Featured from "../components/Featured";
+import Categories from "../components/Categories";
 import Footer from "../components/Footer";
-import "./Home.css";
+import { Route } from "react-router-dom";
+import Featured from "./Featured";
 
 class Home extends Component {
   render() {
@@ -15,7 +17,13 @@ class Home extends Component {
             <Categories />
           </div>
           <div id="page" className="col-md-10">
-            <Featured />
+            <Route exact path="/" component={Featured} />
+            <Route exact path="/category/:name" component={Category} />
+            <Route
+              exact
+              path="/product-details/:name"
+              component={ProductDetails}
+            />
           </div>
         </div>
         <Footer />

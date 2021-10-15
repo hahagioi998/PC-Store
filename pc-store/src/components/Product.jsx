@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 
-import { products } from "../DummyData/categories.js";
-
 class Product extends Component {
   renderLinkToProduct(name) {
     return (
