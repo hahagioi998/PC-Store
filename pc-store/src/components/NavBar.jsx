@@ -12,7 +12,7 @@ class NavBar extends Component {
         <Container>
           <Navbar.Brand>
             <Link to="/" className="navbar-brand navbar-light">
-              React-Bootstrap
+              AnzurakiZz PC Store
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
