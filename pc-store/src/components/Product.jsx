@@ -18,13 +18,13 @@ class Product extends Component {
 
   render() {
     return (
-      <div className="col-auto mb-3">
+      <div className="col-lg-3 col-md-6 col-sm-12 mb-2 mt-2">
         <Card>
-          <Card.Body style={{ width: "18rem" }}>
+          <Card.Body>
             <Card.Title>{this.props.product.name}</Card.Title>
             <Card.Text>{this.props.product.description}</Card.Text>
           </Card.Body>
-          <Card.Body style={{ width: "18rem" }}>
+          <Card.Body>
             <Card.Text>
               {this.renderLinkToProduct(this.props.product.route)}
             </Card.Text>

@@ -15,10 +15,10 @@ class Home extends Component {
       <React.Fragment>
         <Intro />
         <div id="container" className="row">
-          <div id="categories" className="col-md-2">
+          <div id="categories" className="col-lg-2 col-md-6 col-sm-12">
             <Categories />
           </div>
-          <div id="page" className="col-md-10">
+          <div id="page" className="col-lg-10 col-md-6 col-sm-12 border">
             <Route exact path="/" component={Featured} />
             <Route exact path="/category/:name" component={Category} />
             <Route

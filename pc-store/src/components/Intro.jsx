@@ -10,6 +10,7 @@ class Intro extends Component {
   render() {
     return (
       <Jumbotron>
+        <hr className="my-2" />
         <h1 className="display-3">Welcome to {NAME_OF_SHOP}</h1>
         <p className="lead">
           The pc shop with the latest and greatest pc components, and reasonable
