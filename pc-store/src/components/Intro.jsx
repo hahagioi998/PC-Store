@@ -1,12 +1,23 @@
 import React, { Component } from "react";
 
-import { Jumbotron } from "react-bootstrap";
-import { Form, FormControl, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Jumbotron, FormControl } from "react-bootstrap";
 import NAME_OF_SHOP from "../global_variables";
 
 import "./Intro.css";
 
 class Intro extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchLink: "",
+    };
+  }
+
+  updateSearchLink(evt) {
+    this.setState({ searchLink: "/search/" + evt.target.value });
+  }
+
   render() {
     return (
       <Jumbotron>
@@ -17,15 +28,19 @@ class Intro extends Component {
           prices.
         </p>
         <hr className="my-2" />
-        <Form id="intro-search" className="d-flex">
+        <div id="intro-search" className="col-lg-5 col-md-10 col-sm-8 d-flex">
           <FormControl
-            type="search"
+            type="text"
+            id="searchTextBox"
             placeholder="Search"
             className="mr-2"
             aria-label="Search"
+            onChange={(evt) => this.updateSearchLink(evt)}
           />
-          <Button variant="outline-secondary">Search</Button>
-        </Form>
+          <Link to={this.state.searchLink} className="btn btn-secondary">
+            Search
+          </Link>
+        </div>
         <hr className="my-2" />
       </Jumbotron>
     );

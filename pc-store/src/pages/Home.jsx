@@ -8,6 +8,7 @@ import { Route } from "react-router-dom";
 import Featured from "./Featured";
 
 import "./Home.css";
+import SearchResults from "./SearchResults";
 
 class Home extends Component {
   render() {
@@ -25,6 +26,11 @@ class Home extends Component {
               exact
               path="/product-details/:name"
               component={ProductDetails}
+            />
+            <Route
+              exact
+              path="/search/:searchParam"
+              component={SearchResults}
             />
           </div>
         </div>
