@@ -35,10 +35,7 @@ class Intro extends Component {
           prices.
         </p>
         <hr className="my-2" />
-        <div
-          id="intro-search"
-          className="col-lg-5 col-md-10 col-sm-8 col-xs-8 d-flex"
-        >
+        <div id="intro-search" className="col-lg-5 col-md-10 col-sm-8 d-flex">
           <FormControl
             type="text"
             id="searchTextBox"
