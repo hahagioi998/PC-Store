@@ -18,6 +18,13 @@ class Intro extends Component {
     this.setState({ searchLink: "/search/" + evt.target.value });
   }
 
+  // Use arrow function, otherwise state is undefined
+  handleKeyPress = (target) => {
+    if (target.charCode === 13) {
+      window.location.href = this.state.searchLink;
+    }
+  };
+
   render() {
     return (
       <Jumbotron>
@@ -28,7 +35,10 @@ class Intro extends Component {
           prices.
         </p>
         <hr className="my-2" />
-        <div id="intro-search" className="col-lg-5 col-md-10 col-sm-8 d-flex">
+        <div
+          id="intro-search"
+          className="col-lg-5 col-md-10 col-sm-8 col-xs-8 d-flex"
+        >
           <FormControl
             type="text"
             id="searchTextBox"
@@ -36,6 +46,7 @@ class Intro extends Component {
             className="mr-2"
             aria-label="Search"
             onChange={(evt) => this.updateSearchLink(evt)}
+            onKeyPress={this.handleKeyPress}
           />
           <Link to={this.state.searchLink} className="btn btn-secondary">
             Search

@@ -16,7 +16,10 @@ class Home extends Component {
       <React.Fragment>
         <Intro />
         <div id="container" className="row">
-          <div id="categories" className="col-lg-2 col-md-6 col-sm-12">
+          <div
+            id="categories"
+            className="col-lg-2 col-md-6 col-sm-12 mobile-margin visible-xs"
+          >
             <Categories />
           </div>
           <div id="page" className="col-lg-10 col-md-6 col-sm-12 border">
