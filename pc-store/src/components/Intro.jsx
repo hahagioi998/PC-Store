@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
 import { Jumbotron, FormControl } from "react-bootstrap";
-import NAME_OF_SHOP from "../global_variables";
 
 import "./Intro.css";
 
@@ -29,7 +28,7 @@ class Intro extends Component {
     return (
       <Jumbotron>
         <hr className="my-2" />
-        <h1 className="display-3">Welcome to {NAME_OF_SHOP}</h1>
+        <h1 className="display-3">Welcome to AnzurakiZz PC Shop</h1>
         <p className="lead">
           The pc shop with the latest and greatest pc components, and reasonable
           prices.

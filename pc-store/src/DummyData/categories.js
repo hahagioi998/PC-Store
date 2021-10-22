@@ -74,6 +74,8 @@ export const products = [
     category: "processors",
     description: "A Proccessor by intel",
     isFeatured: true,
+    price: 1543,
+    isAvailable: true,
   },
   {
     id: 2,
@@ -82,6 +84,8 @@ export const products = [
     category: "ram-memory",
     description: "A Ram by kingston",
     isFeatured: false,
+    price: 553,
+    isAvailable: true,
   },
   {
     id: 3,
@@ -90,6 +94,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: false,
   },
   {
     id: 3,
@@ -98,6 +104,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: true,
   },
   {
     id: 3,
@@ -106,6 +114,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: false,
   },
   {
     id: 3,
@@ -114,6 +124,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: true,
   },
   {
     id: 3,
@@ -122,6 +134,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: true,
   },
   {
     id: 3,
@@ -130,6 +144,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: true,
   },
   {
     id: 3,
@@ -138,6 +154,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: false,
   },
   {
     id: 3,
@@ -146,6 +164,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: false,
   },
   {
     id: 3,
@@ -154,6 +174,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: true,
   },
   {
     id: 3,
@@ -162,6 +184,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: false,
   },
   {
     id: 3,
@@ -170,6 +194,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: true,
   },
   {
     id: 3,
@@ -178,6 +204,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: true,
   },
   {
     id: 3,
@@ -186,6 +214,8 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: false,
   },
   {
     id: 3,
@@ -194,5 +224,7 @@ export const products = [
     category: "graphics-cards",
     description: "A gpu by amd",
     isFeatured: true,
+    price: 11543,
+    isAvailable: true,
   },
 ];

@@ -1,1 +1,33 @@
+.product-card-price {
+  font-weight: bold;
+  font-size: xx-large;
+  color: #cc0000;
+}
 
+.card-hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #027;
+}
+
+.title-hover {
+  font-size: larger;
+  font-weight: 550;
+}
+
+.available {
+  font-weight: 500;
+  font-size: large;
+}
+
+.availability-green {
+  color: green;
+}
+
+.availability-red {
+  color: red;
+}
+
+.availability-green,
+.availability-red {
+  font-weight: bold;
+}
