@@ -10,4 +10,19 @@
 
 #category-link-container {
   padding: 10px;
+  background-color: #1e262c;
+  border-radius: 1em;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-outline-primary {
+  background-color: #f56c2d !important;
+  border-color: #f56c2d !important;
+}
+
+.btn-primary:hover {
+  background-color: #f34d00 !important;
+  border-color: #f56c2d !important;
 }

@@ -5,20 +5,22 @@ import { Container } from "react-bootstrap";
 import { NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+import "./NavBar.css";
+
 class NavBar extends Component {
   render() {
     return (
-      <Navbar bg="light" expand="lg">
+      <Navbar id="navbar" expand="lg">
         <Container>
           <Navbar.Brand>
-            <Link to="/" className="navbar-brand navbar-light">
+            <Link to="/" id="nav-button" className="navbar-brand">
               AnzurakiZz PC Shop
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link to="/About" className="nav-link">
+              <Link to="/About" id="nav-button" className="nav-link">
                 About
               </Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">

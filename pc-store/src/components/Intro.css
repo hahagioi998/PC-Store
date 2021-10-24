@@ -4,5 +4,23 @@
 }
 
 .jumbotron {
-  margin-bottom: 25px;
+  margin: 25px 0;
+}
+
+#intro-search .form-control:focus {
+  box-shadow: none;
+  border-color: #1e262c;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-outline-primary {
+  background-color: #f56c2d !important;
+  border-color: #f56c2d !important;
+}
+
+.btn-primary:hover {
+  background-color: #f34d00 !important;
+  border-color: #f56c2d !important;
 }

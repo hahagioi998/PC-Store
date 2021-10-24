@@ -1,22 +1,38 @@
 .product-card-price {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: xx-large;
   color: #cc0000;
 }
 
-.card-hover {
-  cursor: pointer;
-  box-shadow: 0 0 5px #027;
+.card {
+  border-color: #1e262c54 !important;
+}
+
+.card .card-title {
+  font-size: x-large;
+}
+
+.card .card-header {
+  background-color: #f56c2d !important;
+  color: #fefff2;
 }
 
 .title-hover {
-  font-size: larger;
-  font-weight: 550;
+  font-size: 30px;
+}
+
+.card .card-body {
+  background-color: #ebebeb;
+}
+
+.card-hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px #1e262c !important;
 }
 
 .available {
-  font-weight: 500;
-  font-size: large;
+  font-size: larger;
+  font-weight: normal;
 }
 
 .availability-green {
@@ -29,5 +45,5 @@
 
 .availability-green,
 .availability-red {
-  font-weight: bold;
+  font-weight: normal;
 }

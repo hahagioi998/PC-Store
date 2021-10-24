@@ -27,28 +27,24 @@ class Intro extends Component {
   render() {
     return (
       <Jumbotron>
-        <hr className="my-2" />
         <h1 className="display-3">Welcome to AnzurakiZz PC Shop</h1>
         <p className="lead">
           The pc shop with the latest and greatest pc components, and reasonable
           prices.
         </p>
-        <hr className="my-2" />
         <div id="intro-search" className="col-lg-5 col-md-10 col-sm-8 d-flex">
           <FormControl
             type="text"
-            id="searchTextBox"
             placeholder="Search"
             className="mr-2"
             aria-label="Search"
             onChange={(evt) => this.updateSearchLink(evt)}
             onKeyPress={this.handleKeyPress}
           />
-          <Link to={this.state.searchLink} className="btn btn-secondary">
+          <Link to={this.state.searchLink} className="btn btn-primary">
             Search
           </Link>
         </div>
-        <hr className="my-2" />
       </Jumbotron>
     );
   }

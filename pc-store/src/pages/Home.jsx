@@ -22,7 +22,7 @@ class Home extends Component {
           >
             <Categories />
           </div>
-          <div id="page" className="col-lg-10 col-md-6 col-sm-12 border">
+          <div id="page" className="col-lg-10 col-md-6 col-sm-12">
             <Route exact path="/" component={Featured} />
             <Route exact path="/category/:name" component={Category} />
             <Route
