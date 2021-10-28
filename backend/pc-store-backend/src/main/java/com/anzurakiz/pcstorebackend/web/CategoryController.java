@@ -1,8 +1,9 @@
 package com.anzurakiz.pcstorebackend.web;
 
 import com.anzurakiz.pcstorebackend.model.Category;
+import com.anzurakiz.pcstorebackend.model.Product;
 import com.anzurakiz.pcstorebackend.service.CategoryService;
-import org.apache.coyote.Response;
+import com.anzurakiz.pcstorebackend.service.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,9 +15,11 @@ import java.util.Map;
 @RequestMapping("/api/categories")
 public class CategoryController {
     private final CategoryService categoryService;
+    private final ProductService productService;
 
-    public CategoryController(CategoryService categoryService) {
+    public CategoryController(CategoryService categoryService, ProductService productService) {
         this.categoryService = categoryService;
+        this.productService = productService;
     }
 
     @GetMapping
@@ -29,6 +32,11 @@ public class CategoryController {
         return categoryService.save(body.get("name"))
                 .map(category -> ResponseEntity.ok().body(category))
                 .orElseGet(() -> ResponseEntity.badRequest().build());
+    }
+
+    @GetMapping("/{categoryId}")
+    public List<Product> findAllFromCategoryWithId(@PathVariable long categoryId) {
+        return this.productService.listProductsFromCategoryWith(categoryId);
     }
 
     @DeleteMapping("/delete")
