@@ -29,6 +29,15 @@ public class ProductService implements IProductService {
     }
 
     @Override
+    public List<Product> findFeatured() {
+        return productRepository.findAll()
+                .stream()
+                .filter(product -> product.isFeatured())
+                .limit(8)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<Product> listProductsFromCategoryWith(long categoryId) {
         Category category = categoryRepository.findById(categoryId)
                 .orElseThrow(() -> new CategoryNotFoundException(categoryId));

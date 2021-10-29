@@ -14,6 +14,8 @@ public interface ICategoryService {
 
     Optional<Category> save(String name);
 
+    Optional<Category> edit(long id, String name);
+
     void deleteByName(String name);
 
     Optional<Category> deleteById(long id);

@@ -1,6 +1,7 @@
 package com.anzurakiz.pcstorebackend.model;
 
 import lombok.Data;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
@@ -23,6 +24,10 @@ public class Category {
 
     public Category(String name) {
         this.name = name;
+        this.route = name.replaceAll("\\s+", "-").toLowerCase();
+    }
+
+    public void setRoute() {
         this.route = name.replaceAll("\\s+", "-").toLowerCase();
     }
 

@@ -1,6 +1,9 @@
 package com.anzurakiz.pcstorebackend.service;
 
 import com.anzurakiz.pcstorebackend.model.Category;
+import com.anzurakiz.pcstorebackend.model.Product;
+import com.anzurakiz.pcstorebackend.model.exceptions.CategoryNotFoundException;
+import com.anzurakiz.pcstorebackend.model.exceptions.ProductNotFoundException;
 import com.anzurakiz.pcstorebackend.repository.CategoryRepository;
 import com.anzurakiz.pcstorebackend.repository.ProductRepository;
 import org.springframework.stereotype.Service;
@@ -30,6 +33,18 @@ public class CategoryService implements ICategoryService {
     @Override
     public Optional<Category> save(String name) {
         return Optional.of(categoryRepository.saveAndFlush(new Category(name)));
+    }
+
+    @Override
+    public Optional<Category> edit(long id, String name) {
+        Category category = categoryRepository
+                .findById(id)
+                .orElseThrow(() -> new ProductNotFoundException(id));
+
+        category.setName(name);
+        category.setRoute();
+
+        return Optional.of(categoryRepository.save(category));
     }
 
     @Override

@@ -9,6 +9,8 @@ public interface IProductService {
 
     List<Product> listProducts();
 
+    List<Product> findFeatured();
+
     List<Product> listProductsFromCategoryWith(long categoryId);
 
     Optional<Product> findById(long id);

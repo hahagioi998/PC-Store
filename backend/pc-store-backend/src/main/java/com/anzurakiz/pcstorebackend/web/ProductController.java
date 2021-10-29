@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("api/products")
 public class ProductController {
     private final ProductService productService;
@@ -21,6 +21,11 @@ public class ProductController {
     @GetMapping
     private List<Product> findAll() {
         return productService.listProducts();
+    }
+
+    @GetMapping("/featured")
+    private List<Product> findFeatured() {
+        return productService.findFeatured();
     }
 
     @PostMapping("/add")
@@ -44,8 +49,8 @@ public class ProductController {
     }
 
     //long id, String name, String description, double price, long categoryId, int discountInPercent, boolean isFeatured, int quantity
-    @PutMapping("/edit")
-    public ResponseEntity<Product> setQuantity(@RequestBody Product productToEdit) {
+    @PutMapping("{productId}/edit")
+    public ResponseEntity<Product> setQuantity(@PathVariable long productId, @RequestBody Product productToEdit) {
         return this.productService.edit(productToEdit)
                 .map(product -> ResponseEntity.ok().body(product))
                 .orElseGet(() -> ResponseEntity.badRequest().build());

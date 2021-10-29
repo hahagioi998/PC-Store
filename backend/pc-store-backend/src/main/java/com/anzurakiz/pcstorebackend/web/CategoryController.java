@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/categories")
 public class CategoryController {
     private final CategoryService categoryService;
@@ -39,9 +39,16 @@ public class CategoryController {
         return this.productService.listProductsFromCategoryWith(categoryId);
     }
 
-    @DeleteMapping("/delete")
-    public ResponseEntity<Category> delete(@RequestParam long id) {
-        return categoryService.deleteById(id)
+    @DeleteMapping("{categoryId}/delete")
+    public ResponseEntity<Category> delete(@PathVariable long categoryId) {
+        return categoryService.deleteById(categoryId)
+                .map(category -> ResponseEntity.ok().body(category))
+                .orElseGet(() -> ResponseEntity.badRequest().build());
+    }
+
+    @PutMapping("{categoryId}/edit")
+    public ResponseEntity<Category> edit(@PathVariable long categoryId, @RequestParam String name) {
+        return categoryService.edit(categoryId, name)
                 .map(category -> ResponseEntity.ok().body(category))
                 .orElseGet(() -> ResponseEntity.badRequest().build());
     }

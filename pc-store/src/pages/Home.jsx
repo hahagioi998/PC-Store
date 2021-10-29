@@ -24,7 +24,7 @@ class Home extends Component {
           </div>
           <div id="page" className="col-lg-10 col-md-6 col-sm-12">
             <Route exact path="/" component={Featured} />
-            <Route exact path="/category/:name" component={Category} />
+            <Route exact path="/category/:categoryId" component={Category} />
             <Route
               exact
               path="/product-details/:name"
