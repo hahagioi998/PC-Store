@@ -11,6 +11,8 @@ public interface IProductService {
 
     List<Product> findFeatured();
 
+    List<Product> findByName(String name);
+
     List<Product> listProductsFromCategoryWith(long categoryId);
 
     Optional<Product> findById(long id);

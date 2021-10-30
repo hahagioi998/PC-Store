@@ -1,39 +1,38 @@
 import React, { Component } from "react";
-import { products } from "../DummyData/categories.js";
 import Product from "../components/Product";
 
 class SearchResults extends Component {
-  checkIfProductNameIsEqualTo(prodName, searchName) {
-    searchName = searchName.toLowerCase().split("%");
-    prodName = prodName.toLowerCase();
-
-    for (var i = 0; i < searchName.length; i++) {
-      if (!prodName.includes(searchName[i])) return false;
-    }
-
-    return true;
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+    };
   }
 
-  renderProductsFromSearch(searchParam) {
-    products.forEach((prod) => {
-      this.checkIfProductNameIsEqualTo(prod.name, searchParam);
-    });
-
-    return products
-      .filter((prod) =>
-        this.checkIfProductNameIsEqualTo(prod.name, searchParam)
-      )
-      .map((prod, i) => {
-        return <Product key={i} product={prod} />;
+  componentDidMount() {
+    fetch(
+      "http://localhost:8080/api/products/search?params=" +
+        this.props.match.params.params
+    )
+      .then((data) => data.json())
+      .then((json) => {
+        this.setState({
+          products: json,
+        });
+      })
+      .catch(function (ex) {
+        console.log("Error:", ex);
       });
   }
 
-  render() {
-    const searchParam = this.props.match.params.searchParam;
+  renderProductsFromSearch() {
+    return this.state.products.map((prod, i) => {
+      return <Product key={i} product={prod} />;
+    });
+  }
 
-    return (
-      <div className="row">{this.renderProductsFromSearch(searchParam)}</div>
-    );
+  render() {
+    return <div className="row">{this.renderProductsFromSearch()}</div>;
   }
 }
 

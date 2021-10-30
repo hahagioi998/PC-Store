@@ -28,6 +28,11 @@ public class ProductController {
         return productService.findFeatured();
     }
 
+    @GetMapping("/search")
+    private List<Product> findByName(@RequestParam String params) {
+        return productService.findByName(params);
+    }
+
     @PostMapping("/add")
     public ResponseEntity<Product> save(@RequestBody Map<String, String> body) {
         String name = body.get("name");

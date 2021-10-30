@@ -39,7 +39,7 @@ class Category extends Component {
 
   renderProductsFromCategory(id) {
     return this.state.products
-      .filter((prod) => prod.category.id == id)
+      .filter((prod) => parseInt(prod.category.id) === parseInt(id))
       .map((prod, i) => {
         return <Product key={i} product={prod} />;
       });

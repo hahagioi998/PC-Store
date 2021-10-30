@@ -1,21 +1,39 @@
 import React, { Component } from "react";
-import { products } from "../DummyData/categories.js";
 
 class ProductDetails extends Component {
-  renderProductPage(name) {
-    const product = products.find((product) => product.route === name);
+  constructor(props) {
+    super(props);
+    this.state = {
+      product: {},
+    };
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:8080/api/products/" + this.props.match.params.id)
+      .then((data) => data.json())
+      .then((json) => {
+        this.setState({
+          product: json,
+        });
+      })
+      .catch(function (ex) {
+        console.log("Error:", ex);
+      });
+  }
+
+  renderProductPage() {
     return (
       <React.Fragment>
-        <h1>{product.name}</h1>
-        <h3>{product.description}</h3>
+        <h1>{this.state.product.name}</h1>
+        <h3>{this.state.product.description}</h3>
       </React.Fragment>
     );
   }
 
   render() {
-    const name = this.props.match.params.name;
+    //const name = this.props.match.params.name;
 
-    return <div className="border">{this.renderProductPage(name)}</div>;
+    return <div className="border">{this.renderProductPage()}</div>;
   }
 }
 

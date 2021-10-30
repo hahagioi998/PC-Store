@@ -38,6 +38,14 @@ public class ProductService implements IProductService {
     }
 
     @Override
+    public List<Product> findByName(String name) {
+        return productRepository.findAll()
+                .stream()
+                .filter(product -> product.getName().toLowerCase().contains(name.toLowerCase()))
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<Product> listProductsFromCategoryWith(long categoryId) {
         Category category = categoryRepository.findById(categoryId)
                 .orElseThrow(() -> new CategoryNotFoundException(categoryId));

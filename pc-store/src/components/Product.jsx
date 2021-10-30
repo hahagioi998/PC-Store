@@ -10,15 +10,16 @@ class Product extends Component {
       cardHover: "",
       titleHover: "",
       isHovered: false,
-      availableColor: this.props.product.isAvailable
-        ? "availability-green"
-        : "availability-red",
-      availableSign: this.props.product.isAvailable ? "✓" : "✕",
+      availableColor:
+        this.props.product.quantity > 0
+          ? "availability-green"
+          : "availability-red",
+      availableSign: this.props.product.quantity > 0 ? "✓" : "✕",
     };
   }
 
-  getLinkToProduct(name) {
-    return "/product-details/" + name;
+  getLinkToProduct(id) {
+    return "/products/" + id;
   }
 
   handleTitleClick = (name) => {
@@ -46,7 +47,7 @@ class Product extends Component {
       <div className="col-lg-3 col-md-6 col-sm-12 mb-2 mt-2">
         <Card
           className={this.state.cardHover}
-          onClick={() => this.handleTitleClick(this.props.product.route)}
+          onClick={() => this.handleTitleClick(this.props.product.id)}
           onMouseEnter={() => this.handleMouseEnterOnTitle()}
           onMouseLeave={() => this.handleMouseLeaveOnTitle()}
         >
