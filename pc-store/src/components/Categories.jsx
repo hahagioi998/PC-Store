@@ -13,7 +13,7 @@ class Categories extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/api/categories")
+    fetch("http://192.168.1.149:8080/api/categories")
       .then((data) => data.json())
       .then((json) => {
         this.setState({

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "../components/Product";
+import ProductCard from "../components/ProductCard";
 
 class SearchResults extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class SearchResults extends Component {
 
   componentDidMount() {
     fetch(
-      "http://localhost:8080/api/products/search?params=" +
+      "http://192.168.1.149:8080/api/products/search?params=" +
         this.props.match.params.params
     )
       .then((data) => data.json())
@@ -27,7 +27,7 @@ class SearchResults extends Component {
 
   renderProductsFromSearch() {
     return this.state.products.map((prod, i) => {
-      return <Product key={i} product={prod} />;
+      return <ProductCard key={i} product={prod} />;
     });
   }
 

@@ -9,7 +9,9 @@ class ProductDetails extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/api/products/" + this.props.match.params.id)
+    fetch(
+      "http://192.168.1.149:8080/api/products/" + this.props.match.params.id
+    )
       .then((data) => data.json())
       .then((json) => {
         this.setState({

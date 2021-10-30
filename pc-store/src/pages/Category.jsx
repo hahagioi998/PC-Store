@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "../components/Product";
+import ProductCard from "../components/ProductCard";
 
 class Category extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class Category extends Component {
 
   fetchData() {
     console.log(this.categoryId);
-    fetch("http://localhost:8080/api/categories/" + this.categoryId)
+    fetch("http://192.168.1.149:8080/api/categories/" + this.categoryId)
       .then((data) => data.json())
       .then((json) => {
         this.setState({
@@ -41,7 +41,7 @@ class Category extends Component {
     return this.state.products
       .filter((prod) => parseInt(prod.category.id) === parseInt(id))
       .map((prod, i) => {
-        return <Product key={i} product={prod} />;
+        return <ProductCard key={i} product={prod} />;
       });
   }
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Card } from "react-bootstrap";
 
-import "./Product.css";
+import "./ProductCard.css";
 
 class Product extends Component {
   constructor(props) {
