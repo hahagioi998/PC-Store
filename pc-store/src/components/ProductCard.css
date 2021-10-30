@@ -1,38 +1,39 @@
-.product-card-price {
-  font-weight: bolder;
-  font-size: xx-large;
-  color: #cc0000;
+.price-field {
+  color: white;
+  font-size: large;
+  font-weight: 500;
+  margin-top: 10px auto;
+  display: inline-block;
 }
 
-.card {
-  border-color: #1e262c54 !important;
+.price-amount {
+  display: inline-block;
+  background-color: #3a3b3d;
+  border: solid 1px;
+  border-color: rgb(66, 66, 66);
+  border-radius: 5%;
+  margin-left: 10px;
+  padding: 3px 5px;
 }
 
-.card .card-title {
-  font-size: x-large;
+.discount-amount {
+  display: inline-block;
+  border: solid 1px;
+  border-color: #e95916;
+  background-color: #f56c2d;
+  border-radius: 5%;
+  padding: 3px 5px;
 }
 
-.card .card-header {
-  background-color: #f56c2d !important;
-  color: #fefff2;
-}
-
-.title-hover {
-  font-size: 30px;
-}
-
-.card .card-body {
-  background-color: #ebebeb;
-}
-
-.card-hover {
-  cursor: pointer;
-  box-shadow: 0 0 15px #1e262c !important;
-}
-
-.available {
-  font-size: larger;
+.available-field {
+  font-size: large;
+  display: block;
   font-weight: normal;
+  margin: -20px auto 15px auto;
+}
+
+.manufacturer {
+  margin: 0 auto;
 }
 
 .availability-green {
@@ -45,5 +46,32 @@
 
 .availability-green,
 .availability-red {
-  font-weight: normal;
+  width: 100%;
+}
+
+.card {
+  border-color: #1e262c54 !important;
+}
+
+.card .card-title {
+  font-size: x-large;
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card .card-header {
+  background-color: #f56c2d !important;
+  color: #fefff2;
+}
+
+.card .card-body {
+  background-color: #ebebeb;
+}
+
+.card-hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px #1e262c !important;
 }

@@ -1,0 +1,39 @@
+.price-field {
+  color: white;
+  font-size: large;
+  font-weight: 500;
+}
+
+.price-field-gray {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5%;
+  background-color: gray;
+}
+
+.price-field-green {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5%;
+  background-color: rgb(48, 206, 48);
+}
+
+.discount-field {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5%;
+  background-color: rgb(48, 206, 48);
+}
+
+.available-field {
+  font-size: x-large;
+  margin: -10px 0px 20px 0px;
+}
+
+.availability-green {
+  color: green;
+}
+
+.availability-red {
+  color: red;
+}

@@ -18,11 +18,11 @@ class Home extends Component {
         <div id="container" className="row">
           <div
             id="categories"
-            className="col-lg-2 col-md-6 col-sm-12 mobile-margin visible-xs"
+            className="col-lg-2 col-md-4 col-sm-12 mobile-margin visible-xs"
           >
             <Categories />
           </div>
-          <div id="page" className="col-lg-10 col-md-6 col-sm-12">
+          <div id="page" className="col-lg-10 col-md-8 col-sm-12">
             <Route exact path="/" component={Featured} />
             <Route exact path="/category/:categoryId" component={Category} />
             <Route exact path="/products/:id" component={ProductDetails} />
