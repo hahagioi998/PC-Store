@@ -9,6 +9,7 @@ import Featured from "./Featured";
 
 import "./Home.css";
 import SearchResults from "./SearchResults";
+import AddProduct from "./AddProduct";
 
 class Home extends Component {
   render() {
@@ -27,6 +28,7 @@ class Home extends Component {
             <Route exact path="/category/:categoryId" component={Category} />
             <Route exact path="/products/:id" component={ProductDetails} />
             <Route exact path="/search/:params" component={SearchResults} />
+            <Route exact path="/AddProduct" component={AddProduct} />
           </div>
         </div>
         <Footer />

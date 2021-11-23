@@ -24,7 +24,6 @@ class Category extends Component {
   }
 
   fetchData() {
-    console.log(this.categoryId);
     fetch("http://192.168.1.149:8080/api/categories/" + this.categoryId)
       .then((data) => data.json())
       .then((json) => {

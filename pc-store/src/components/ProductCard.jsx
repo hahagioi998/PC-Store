@@ -18,7 +18,6 @@ class Product extends Component {
       price: this.calculatePrice(this.props.product),
       discount: this.props.product.discountInPercent,
     };
-    console.log(this.state.isDiscounted);
   }
 
   componentDidUpdate(prevProps) {

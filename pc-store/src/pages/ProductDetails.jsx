@@ -17,6 +17,12 @@ class ProductDetails extends Component {
         this.setState({
           product: json,
         });
+        this.setState({
+          product: {
+            ...this.state.product,
+            image: "data:image/png;base64," + this.state.product.image,
+          },
+        });
       })
       .catch(function (ex) {
         console.log("Error:", ex);
@@ -28,6 +34,7 @@ class ProductDetails extends Component {
       <React.Fragment>
         <h1>{this.state.product.name}</h1>
         <h3>{this.state.product.description}</h3>
+        <img src={this.state.product.image} alt="" />
       </React.Fragment>
     );
   }

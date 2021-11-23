@@ -23,6 +23,9 @@ class NavBar extends Component {
               <Link to="/About" id="nav-button" className="nav-link">
                 About
               </Link>
+              <Link to="/AddProduct" id="nav-button" className="nav-link">
+                Add Product
+              </Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
