@@ -1,2 +1,2 @@
-# React PC Store Test
- Learning react by creating a pc store
+# PC Store
+ Learning react and springboot by creating a pc store
