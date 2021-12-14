@@ -4,7 +4,7 @@ import ProductDetails from "./ProductDetails";
 import Intro from "../components/Intro";
 import Categories from "../components/Categories";
 import Footer from "../components/Footer";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Featured from "./Featured";
 
 import "./Home.css";
@@ -24,11 +24,13 @@ class Home extends Component {
             <Categories />
           </div>
           <div id="page" className="col-lg-10 col-md-8 col-sm-12">
-            <Route exact path="/" component={Featured} />
-            <Route exact path="/category/:categoryId" component={Category} />
-            <Route exact path="/products/:id" component={ProductDetails} />
-            <Route exact path="/search/:params" component={SearchResults} />
-            <Route exact path="/AddProduct" component={AddProduct} />
+            <Routes>
+              <Route exact path="/" component={Featured} />
+              <Route exact path="/category/:categoryId" component={Category} />
+              <Route exact path="/products/:id" component={ProductDetails} />
+              <Route exact path="/search/:params" component={SearchResults} />
+              <Route exact path="/AddProduct" component={AddProduct} />
+            </Routes>
           </div>
         </div>
         <Footer />

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
-import { Jumbotron, FormControl } from "react-bootstrap";
+import { FormControl } from "react-bootstrap";
 
 import "./Intro.css";
 
@@ -26,7 +26,7 @@ class Intro extends Component {
 
   render() {
     return (
-      <Jumbotron>
+      <div id="jumbotron">
         <h1 className="display-3">Welcome to AnzurakiZz PC Shop</h1>
         <p className="lead">
           The pc shop with the latest and greatest pc components, and reasonable
@@ -45,7 +45,7 @@ class Intro extends Component {
             Search
           </Link>
         </div>
-      </Jumbotron>
+      </div>
     );
   }
 }
